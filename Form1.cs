@@ -37,7 +37,7 @@ namespace DynamicCurrenciesConverter
         public static double Exchange(string from, string to, string date)
         {
             string url;
-            url = "https://free.currencyconverterapi.com/api/v6/" + "convert?q=" + from + "_" + to + "&compact=y&date=" + date + "&apiKey=6f8ea18f7f98fa33e29a";
+            url = "https://free.currencyconverterapi.com/api/v6/" + "convert?q=" + from + "_" + to + "&compact=y&date=" + date + "&apiKey=7d15744edeb3d3d38667";
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.AutomaticDecompression = DecompressionMethods.GZip;
 
@@ -67,13 +67,13 @@ namespace DynamicCurrenciesConverter
         {
             if (string.IsNullOrEmpty(textBox1.Text))
             {
-                textBox2.Text = "Masukkan Nilai Asal";
+                textBox2.Text = "Input a Value!";
             }
             else
             {
                 if (string.IsNullOrEmpty(comboBox1.Text) || string.IsNullOrEmpty(comboBox2.Text))
                 {
-                    textBox2.Text = "Pilih Mata Uang Asal dan Tujuan";
+                    textBox2.Text = "Choose Currency!";
                 }
                 else
                 {
